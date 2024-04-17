@@ -1,59 +1,59 @@
 version: "2.0"
 
 nlu:
-- intent: greet
+- intent: reservation
   examples: |
-    - bonjour
-    - salut
-    - hey
-- intent: goodbye
-  examples: |
-    - au revoir
-    - à bientôt
-- intent: book_hotel
-  examples: |
-    - Je voudrais réserver un hôtel à [Paris](city) pour [demain](date)
-    - Est-ce que je peux réserver un hôtel à [New York](city) pour [la semaine prochaine](date)
-    - Réserve-moi un hôtel à [Londres](city) pour [le mois prochain](date)
-    - J'aimerais réserver un hôtel à [Tokyo](city) pour [le 15 avril](date)
-    - Je cherche un hôtel à [Barcelone](city) pour [le week-end](date)
-    - Y a-t-il des hôtels disponibles à [Dubai](city) pour [ce soir](date) ?
-    - Pouvez-vous trouver un hôtel à [Sydney](city) pour [la fin de la semaine](date) ?
-    - Je veux réserver un hôtel à [Rome](city) pour [le 20 juin](date)
-    - Trouvez-moi un hôtel à [Berlin](city) pour [le 10 juillet](date)
-    - Je cherche un hébergement à [Amsterdam](city) pour [la première semaine d'août](date)
-- intent: inform
-  examples: |
-    - [Paris](city)
-    - [New York](city)
-    - [Londres](city)
-    - [Tokyo](city)
-    - [Barcelone](city)
-    - [Dubai](city)
-    - [Sydney](city)
-    - [Rome](city)
-    - [Berlin](city)
-    - [Amsterdam](city)
-    - [demain](date)
-    - [la semaine prochaine](date)
-    - [le mois prochain](date)
-    - [le 17 avril](date)
-    - [le week-end](date)
-    - [ce soir](date)
-    - [la fin de la semaine](date)
-    - [le 20 juin](date)
-    - [le 10 juillet](date)
-    - [la première semaine d'août](date)
+    - Je veux réserver une table
+    - Pouvez-vous réserver une table pour moi ?
+    - Je voudrais faire une réservation
+    
 
-- lookup: city
+- intent: demander_date
   examples: |
-    - Paris
-    - New York
-    - Londres
-    - Tokyo
-    - Barcelone
-    - Dubai
-    - Sydney
-    - Rome
-    - Berlin
-    - Amsterdam
+    - Quand puis-je réserver une table ?
+    - Avez-vous une disponibilité pour ce soir ?
+    
+
+- intent: donner_date
+  examples: |
+    - Ce soir
+    - Demain
+    - Le 12 avril
+    
+
+- intent: demander_nombre_personnes
+  examples: |
+    - Pour combien de personnes souhaitez-vous réserver ?
+    - Quel est le nombre de personnes ?
+    
+
+- intent: donner_nombre_personnes
+  examples: |
+    - 2 personnes
+    - Une personne
+    
+
+- intent: donner_nom
+  examples: |
+    - Je m'appelle {nom}
+    - Mon nom est {nom}
+    
+
+- intent: donner_numero_telephone
+  examples: |
+    - Mon numéro de téléphone est {numero_telephone}
+    - Voici mon numéro : {numero_telephone}
+    
+
+- intent: donner_commentaire
+  examples: |
+    - {commentaire}
+    - J'ai des préférences alimentaires
+    
+
+- intent: autre_date
+  examples: |
+    - Oui
+    - D'accord
+    - Oui, une autre date
+

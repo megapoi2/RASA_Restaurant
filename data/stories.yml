@@ -1,17 +1,40 @@
 version: "2.0"
 
 stories:
-- story: Réserver un hôtel
+- story: Réservation réussie
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: book_hotel
-  - action: utter_ask_city
-  - intent: inform
-    entities:
-    - city: "{lookup: 'city'}"
-  - action: utter_ask_date
-  - intent: inform
+  - intent: reservation
+  - action: utter_demande_date
+  - intent: donner_date
     entities:
     - date: "{date}"
-  - action: utter_confirm_booking
+  - action: utter_demande_nombre_personnes
+  - intent: donner_nombre_personnes
+    entities:
+    - nombre_personnes: "{nombre_personnes}"
+  - action: action_verifier_disponibilite
+  - action: action_confirmer_reservation
+  - action: utter_demande_nom
+  - intent: donner_nom
+    entities:
+    - nom: "{nom}"
+  - action: utter_demande_numero_telephone
+  - intent: donner_numero_telephone
+    entities:
+    - numero_telephone: "{numero_telephone}"
+  - action: action_generer_code_reservation
+  - action: utter_demande_commentaire
+  - intent: donner_commentaire
+    entities:
+    - commentaire: "{commentaire}"
+  - action: utter_confirmation_reservation
+
+- story: Réservation échouée
+  steps:
+  - intent: reservation
+  - action: utter_demande_date
+  - intent: donner_date
+    entities:
+    - date: "{date}"
+  - action: action_verifier_disponibilite
+  - intent: autre_date

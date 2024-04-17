@@ -1,48 +1,58 @@
-version: "2.0"
-
 intents:
-  - greet
-  - goodbye
-  - book_hotel
-  - inform
-
-entities:
-  - city
-  - date
-  - lookup_city
+  - reservation
+  - demander_date
+  - donner_date
+  - demander_nombre_personnes
+  - donner_nombre_personnes
+  - donner_nom
+  - donner_numero_telephone
+  - donner_commentaire
+  - autre_date
 
 slots:
-  city:
-    type: text
-    mappings:
-    - type: from_entity
-      entity: city
   date:
     type: text
     mappings:
-    - type: from_entity
-      entity: date
-
-responses:
-  utter_greet:
-    - text: "Bonjour! Comment puis-je vous aider aujourd'hui?"
-  utter_goodbye:
-    - text: "Au revoir, passez une excellente journée!"
-  utter_ask_city:
-    - text: "Dans quelle ville souhaitez-vous réserver un hôtel?"
-  utter_ask_date:
-    - text: "À quelle date souhaitez-vous réserver l'hôtel?"
-  utter_confirm_booking:
-    - text: "Votre réservation pour un hôtel à {city} pour {date} a été confirmée. Merci!"
+      - type: from_entity
+        entity: date
+  nombre_personnes:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: nombre_personnes
+  nom:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: nom
+  numero_telephone:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: numero_telephone
+  commentaire:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: commentaire
 
 actions:
-  - utter_greet
-  - utter_goodbye
-  - utter_ask_city
-  - utter_ask_date
-  - utter_confirm_booking
-  - utter_iamabot
+  - action_verifier_disponibilite
+  - action_confirmer_reservation
+  - action_generer_code_reservation
 
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+responses:
+  utter_demande_date:
+    - text: "Quand souhaitez-vous faire votre réservation ?"
+  utter_demande_nombre_personnes:
+    - text: "Pour combien de personnes souhaitez-vous réserver ?"
+  utter_demande_nom:
+    - text: "Quel est votre nom ?"
+  utter_demande_numero_telephone:
+    - text: "Pouvez-vous me donner votre numéro de téléphone ?"
+  utter_demande_commentaire:
+    - text: "Avez-vous des commentaires ou des préférences ?"
+  utter_confirmation_reservation:
+    - text: "Votre réservation a été confirmée. Votre code de réservation est [CODE]."
+  utter_proposer_autre_date:
+    - text: "Malheureusement, nous ne sommes pas disponibles à cette date. Souhaitez-vous réserver pour une autre date ?"

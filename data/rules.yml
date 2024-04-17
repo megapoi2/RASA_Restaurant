@@ -1,4 +1,30 @@
-version: "3.1"
+version: "2.0"
 
 rules:
+- rule: Demander la date de réservation
+  steps:
+  - intent: reservation
+  - action: utter_demande_date
 
+
+- rule: Demander le nom
+  steps:
+  - intent: donner_nom
+    entities:
+    - nom: "{nom}"
+  - action: utter_demande_numero_telephone
+
+- rule: Demander le numéro de téléphone
+  steps:
+  - intent: donner_numero_telephone
+    entities:
+    - numero_telephone: "{numero_telephone}"
+  - action: action_generer_code_reservation
+  - action: utter_demande_commentaire
+
+- rule: Confirmer la réservation avec commentaire
+  steps:
+  - intent: donner_commentaire
+    entities:
+    - commentaire: "{commentaire}"
+  - action: utter_confirmation_reservation
