@@ -1,0 +1,23 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"numero_telephone\": [1.0]}, \"user\": {\"intent\": \"donner_numero_telephone\"}}]": "action_generer_code_reservation",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"numero_telephone\": [1.0]}, \"user\": {\"intent\": \"donner_numero_telephone\"}}, {\"prev_action\": {\"action_name\": \"action_generer_code_reservation\"}, \"slots\": {\"numero_telephone\": [1.0]}, \"user\": {\"intent\": \"donner_numero_telephone\"}}]": "utter_demande_commentaire",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"numero_telephone\": [1.0]}, \"user\": {\"intent\": \"donner_numero_telephone\"}}, {\"prev_action\": {\"action_name\": \"action_generer_code_reservation\"}, \"slots\": {\"numero_telephone\": [1.0]}, \"user\": {\"intent\": \"donner_numero_telephone\"}}, {\"prev_action\": {\"action_name\": \"utter_demande_commentaire\"}, \"slots\": {\"numero_telephone\": [1.0]}, \"user\": {\"intent\": \"donner_numero_telephone\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"nom\": [1.0]}, \"user\": {\"intent\": \"donner_nom\"}}]": "utter_demande_numero_telephone",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"nom\": [1.0]}, \"user\": {\"intent\": \"donner_nom\"}}, {\"prev_action\": {\"action_name\": \"utter_demande_numero_telephone\"}, \"slots\": {\"nom\": [1.0]}, \"user\": {\"intent\": \"donner_nom\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"reservation\"}}]": "utter_demande_date",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"reservation\"}}, {\"prev_action\": {\"action_name\": \"utter_demande_date\"}, \"user\": {\"intent\": \"reservation\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"commentaire\": [1.0]}, \"user\": {\"intent\": \"donner_commentaire\"}}]": "utter_confirmation_reservation",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"commentaire\": [1.0]}, \"user\": {\"intent\": \"donner_commentaire\"}}, {\"prev_action\": {\"action_name\": \"utter_confirmation_reservation\"}, \"slots\": {\"commentaire\": [1.0]}, \"user\": {\"intent\": \"donner_commentaire\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent restart",
+      "predicting default action with intent session_start",
+      "predicting default action with intent back"
+    ]
+  }
+}

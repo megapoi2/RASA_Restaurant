@@ -1,45 +1,46 @@
 intents:
   - reservation
-  - demander_date
   - donner_date
-  - demander_nombre_personnes
   - donner_nombre_personnes
   - donner_nom
   - donner_numero_telephone
   - donner_commentaire
-  - autre_date
+
+entities:
+  - date
+  - nombre_personnes
+  - numero_telephone
+  - nom
+  - commentaire
+  - date_disponible
 
 slots:
   date:
     type: text
-    mappings:
-      - type: from_entity
-        entity: date
+    mappings: []
   nombre_personnes:
-    type: text
-    mappings:
-      - type: from_entity
-        entity: nombre_personnes
+    type: float
+    mappings: []
   nom:
     type: text
-    mappings:
-      - type: from_entity
-        entity: nom
+    mappings: []
   numero_telephone:
-    type: text
-    mappings:
-      - type: from_entity
-        entity: numero_telephone
+    type: float
+    mappings: []
   commentaire:
     type: text
-    mappings:
-      - type: from_entity
-        entity: commentaire
+    mappings: []
+  date_disponible:
+    type: bool
+    initial_value: true
+    mappings: []
+
 
 actions:
   - action_verifier_disponibilite
   - action_confirmer_reservation
   - action_generer_code_reservation
+  - action_proposer_nouvelle_date
 
 responses:
   utter_demande_date:
@@ -52,7 +53,5 @@ responses:
     - text: "Pouvez-vous me donner votre numéro de téléphone ?"
   utter_demande_commentaire:
     - text: "Avez-vous des commentaires ou des préférences ?"
-  utter_confirmation_reservation:
-    - text: "Votre réservation a été confirmée. Votre code de réservation est [CODE]."
-  utter_proposer_autre_date:
+  utter_proposer_nouvelle_date:
     - text: "Malheureusement, nous ne sommes pas disponibles à cette date. Souhaitez-vous réserver pour une autre date ?"

@@ -1,0 +1,20 @@
+{
+    "reservation": [
+        {
+            "codeResa": 1,
+            "dateDeReservation": null,
+            "nombreDePersonnes": null,
+            "nomDeResa": null,
+            "numeroDeTelephone": null,
+            "commentaire": null
+        },
+        {
+            "codeResa": 2,
+            "dateDeReservation": null,
+            "nombreDePersonnes": null,
+            "nomDeResa": null,
+            "numeroDeTelephone": null,
+            "commentaire": null
+        }
+    ]
+}

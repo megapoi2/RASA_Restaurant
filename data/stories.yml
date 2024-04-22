@@ -8,26 +8,26 @@ stories:
   - intent: donner_date
     entities:
     - date: "{date}"
-  - action: utter_demande_nombre_personnes
-  - intent: donner_nombre_personnes
-    entities:
-    - nombre_personnes: "{nombre_personnes}"
   - action: action_verifier_disponibilite
-  - action: action_confirmer_reservation
+  - slot_was_set:
+    - date_disponible: true
   - action: utter_demande_nom
   - intent: donner_nom
     entities:
     - nom: "{nom}"
+  - action: utter_demande_nombre_personnes
+  - intent: donner_nombre_personnes
+    entities:
+    - nombre_personnes: "{nombre_personnes}"
   - action: utter_demande_numero_telephone
   - intent: donner_numero_telephone
     entities:
     - numero_telephone: "{numero_telephone}"
-  - action: action_generer_code_reservation
   - action: utter_demande_commentaire
   - intent: donner_commentaire
     entities:
     - commentaire: "{commentaire}"
-  - action: utter_confirmation_reservation
+  - action: action_confirmer_reservation
 
 - story: Réservation échouée
   steps:
@@ -37,4 +37,6 @@ stories:
     entities:
     - date: "{date}"
   - action: action_verifier_disponibilite
-  - intent: autre_date
+  - slot_was_set:
+    - date_disponible: false
+  - action: action_proposer_nouvelle_date
