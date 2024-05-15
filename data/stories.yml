@@ -40,3 +40,13 @@ stories:
   - slot_was_set:
     - date_disponible: false
   - action: action_proposer_nouvelle_date
+
+
+- story: Suppression de réservation
+  steps:
+  - intent: demande_supprimer_reservation
+  - action: utter_demande_code_reservation
+  - intent: donner_code_reservation
+    entities:
+    - code: "{code}"
+  - action: action_supprimer_reservation

@@ -5,6 +5,8 @@ intents:
   - donner_nom
   - donner_numero_telephone
   - donner_commentaire
+  - demande_supprimer_reservation
+  - donner_code_reservation
 
 entities:
   - date
@@ -13,12 +15,16 @@ entities:
   - nom
   - commentaire
   - date_disponible
+  - code
 
 slots:
   date:
     type: text
     mappings: []
   nombre_personnes:
+    type: float
+    mappings: []
+  code:
     type: float
     mappings: []
   nom:
@@ -41,6 +47,7 @@ actions:
   - action_confirmer_reservation
   - action_generer_code_reservation
   - action_proposer_nouvelle_date
+  - action_supprimer_reservation
 
 responses:
   utter_demande_date:
@@ -53,5 +60,5 @@ responses:
     - text: "Pouvez-vous me donner votre numéro de téléphone ?"
   utter_demande_commentaire:
     - text: "Avez-vous des commentaires ou des préférences ?"
-  utter_proposer_nouvelle_date:
-    - text: "Malheureusement, nous ne sommes pas disponibles à cette date. Souhaitez-vous réserver pour une autre date ?"
+  utter_demande_code_reservation:
+    - text: "Quel est le code de la réservation que vous souhaitez supprimer?"

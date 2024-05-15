@@ -21,8 +21,12 @@ nlu:
 - intent: donner_nombre_personnes
   examples: |
     - [2](nombre_personnes) personnes
+    - Ca sera pour [2](combre_personnes) personnes
     - Nous serons [4](nombre_personnes) personnes
     - Il y aura [6](nombre_personnes) personnes à ma table
+    - Je serais [seul](nombre_personnes)
+    - On sera [3] personnes
+    - [5](nombre_personnes) personnes
 
 - intent: donner_nom
   examples: |
@@ -30,6 +34,8 @@ nlu:
     - Mon nom est [Martin](nom)
     - Je suis [Sophie](nom)
     - [Garcia](nom) est mon nom
+    - Je me prenome [Bob](nom)
+    - Sous le nom [Clarisse](nom)
 
 - intent: donner_numero_telephone
   examples: |
@@ -41,8 +47,27 @@ nlu:
 
 - intent: donner_commentaire
   examples: |
-    - [J'ai des préférences alimentaires](commentaire)
-    - [J'aimerais demander une table près de la fenêtre](commentaire)
-    - [Je souhaite une table dans un coin tranquille](commentaire)
-    - [Je suis allergique au popcorns](commentaire)
-    - [Je préfère une ambiance calme](commentaire)
+    - Oui, [J'ai des préférences alimentaires](commentaire)
+    - Bien-sûr [J'aimerais demander une table près de la fenêtre](commentaire)
+    - Oui [Je souhaite une table dans un coin tranquille](commentaire)
+    - Bien sur [Je suis allergique aux popcorns](commentaire)
+    - Oui [Je préfère une ambiance calme](commentaire)
+    - Non aucune
+    - Non 
+
+- intent: demande_supprimer_reservation
+  examples: |
+    - Je veux annuler ma réservation
+    - Supprimer la réservation numéro 1
+    - Annuler ma réservation pour le code 3
+    - Je ne peux pas venir, peux-tu supprimer ma réservation ?
+    
+- intent: donner_code_reservation
+  examples: |
+    - Le code est [1](code)
+    - Mon code est [2](code)
+    - Voici le code de ma réservation : [3](code)
+    - J'ai réservé sous le code [4](code)
+    - C'est sous le code [5](code)
+    - [2](code)
+

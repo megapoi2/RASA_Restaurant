@@ -15,6 +15,22 @@
             "nomDeResa": null,
             "numeroDeTelephone": null,
             "commentaire": null
+        },
+        {
+            "codeResa": 3,
+            "dateDeReservation": null,
+            "nombreDePersonnes": null,
+            "nomDeResa": null,
+            "numeroDeTelephone": null,
+            "commentaire": "J'ai des pr\u00e9f\u00e9rences alimentaires"
+        },
+        {
+            "codeResa": 4,
+            "dateDeReservation": null,
+            "nombreDePersonnes": null,
+            "nomDeResa": null,
+            "numeroDeTelephone": null,
+            "commentaire": "J'ai des pr\u00e9f\u00e9rences alimentaires"
         }
     ]
 }
