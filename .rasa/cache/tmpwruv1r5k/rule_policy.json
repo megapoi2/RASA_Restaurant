@@ -1,0 +1,26 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"demande_allergenes\"}}]": "utter_allergenes",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"demande_allergenes\"}}, {\"prev_action\": {\"action_name\": \"utter_allergenes\"}, \"user\": {\"intent\": \"demande_allergenes\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"demander_menu_du_jour\"}}]": "utter_menu_du_jour",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"demander_menu_du_jour\"}}, {\"prev_action\": {\"action_name\": \"utter_menu_du_jour\"}, \"user\": {\"intent\": \"demander_menu_du_jour\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"demander_carte\"}}]": "utter_carte",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"demander_carte\"}}, {\"prev_action\": {\"action_name\": \"utter_carte\"}, \"user\": {\"intent\": \"demander_carte\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent session_start",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"demander_carte\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"demande_allergenes\"}}, {\"prev_action\": {\"action_name\": \"utter_allergenes\"}, \"user\": {\"intent\": \"demande_allergenes\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"demander_menu_du_jour\"}}, {\"prev_action\": {\"action_name\": \"utter_menu_du_jour\"}, \"user\": {\"intent\": \"demander_menu_du_jour\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"demander_menu_du_jour\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"demande_allergenes\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"demander_carte\"}}, {\"prev_action\": {\"action_name\": \"utter_carte\"}, \"user\": {\"intent\": \"demander_carte\"}}]",
+      "predicting default action with intent back"
+    ]
+  }
+}

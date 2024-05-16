@@ -9,14 +9,6 @@
             "commentaire": null
         },
         {
-            "codeResa": 2,
-            "dateDeReservation": null,
-            "nombreDePersonnes": null,
-            "nomDeResa": null,
-            "numeroDeTelephone": null,
-            "commentaire": null
-        },
-        {
             "codeResa": 3,
             "dateDeReservation": null,
             "nombreDePersonnes": null,
@@ -30,6 +22,14 @@
             "nombreDePersonnes": null,
             "nomDeResa": null,
             "numeroDeTelephone": null,
+            "commentaire": "J'ai des pr\u00e9f\u00e9rences alimentaires"
+        },
+        {
+            "codeResa": 4,
+            "dateDeReservation": "2021-05-16",
+            "nombreDePersonnes": "2",
+            "nomDeResa": "George",
+            "numeroDeTelephone": "0605487592",
             "commentaire": "J'ai des pr\u00e9f\u00e9rences alimentaires"
         }
     ]

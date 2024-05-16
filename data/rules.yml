@@ -1,3 +1,16 @@
 version: "2.0"
 
+rules:
+- rule: Afficher le menu du jour
+  steps:
+  - intent: demander_menu_du_jour
+  - action: utter_menu_du_jour
+- rule: Afficher la carte
+  steps:
+  - intent: demander_carte
+  - action: utter_carte
+- rule: Afficher la liste des allergènes
+  steps:
+  - intent: demande_allergenes
+  - action: utter_allergenes
 

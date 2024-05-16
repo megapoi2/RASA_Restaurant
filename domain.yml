@@ -7,6 +7,9 @@ intents:
   - donner_commentaire
   - demande_supprimer_reservation
   - donner_code_reservation
+  - demander_menu_du_jour
+  - demander_carte
+  - demande_allergenes
 
 entities:
   - date
@@ -20,22 +23,40 @@ entities:
 slots:
   date:
     type: text
-    mappings: []
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: date
   nombre_personnes:
     type: float
-    mappings: []
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: nombre_personnes
   code:
     type: float
-    mappings: []
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: code
   nom:
     type: text
-    mappings: []
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: nom
   numero_telephone:
     type: float
-    mappings: []
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: numero_telephone
   commentaire:
     type: text
-    mappings: []
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: commentaire
   date_disponible:
     type: bool
     initial_value: true
@@ -62,3 +83,9 @@ responses:
     - text: "Avez-vous des commentaires ou des préférences ?"
   utter_demande_code_reservation:
     - text: "Quel est le code de la réservation que vous souhaitez supprimer?"
+  utter_menu_du_jour:
+    - text: "Aujourd'hui, nous avons du poulet rôti avec des légumes et une tarte aux pommes en dessert."
+  utter_carte:
+    - text: "Voici le lien vers la carte : https://oaformation.com/wp-content/uploads/2017/07/fixer-prix-et-tarif-au-restaurant-sur-menu.jpg"
+  utter_allergenes:
+   - text: "Liste des allergènes : https://sanhy-formation.fr/wp-content/uploads/2022/12/Tableau-allergenes-MP-min-300x187.webp"

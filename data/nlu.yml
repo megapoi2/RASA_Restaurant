@@ -71,3 +71,26 @@ nlu:
     - C'est sous le code [5](code)
     - [2](code)
 
+- intent: demander_menu_du_jour
+  examples: |
+    - Quel est le menu du jour ?
+    - Qu'est-ce qu'on mange aujourd'hui ?
+    - Je veux connaître le menu du jour
+    - Quel est le plat du jour ?
+    - Qu'est-ce qui est au menu aujourd'hui ?
+
+- intent: demander_carte
+  examples: |
+    - Quel est la carte ?
+    - Je peux voir la carte ?
+    - Pouvons nous avoir la carte
+    - Ou est la carte
+    - Puis-je avoir la carte ?
+
+- intent: demande_allergenes
+  examples: |
+    - Quels sont les allergenes ?
+    - Liste des allergenes
+    - Pouvons nous avoir la liste des allergenes ?
+    - Ou est la liste des allergenes ?
+    - Puis-je avoir la liste des allergenes ?

@@ -39,17 +39,9 @@ class ActionConfirmerReservation(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         date_resa = tracker.get_slot("date")
         nombre_personnes = tracker.get_slot("nombre_personnes")
-        nom_resa = next(tracker.get_latest_entity_values("nom"), None)
-        numero_telephone = next(tracker.get_latest_entity_values("numero_telephone"), None)
-        commentaire = next(tracker.get_latest_entity_values("commentaire"), None)
-
-        print("Date de réservation :", date_resa)
-        print("Nombre de personnes :", nombre_personnes)
-        print("Nom :", nom_resa)
-        print("Numéro de téléphone :", numero_telephone)
-        print("Commentaire :", commentaire)
-
-
+        nom_resa = tracker.get_slot("nom")
+        numero_telephone = tracker.get_slot("numero_telephone")
+        commentaire = tracker.get_slot("commentaire")
         current_directory = os.path.dirname(os.path.realpath(__file__))
         reservations_file_path = os.path.join(current_directory, "reservations.json")
 
@@ -132,8 +124,7 @@ class ActionSupprimerReservation(Action):
         # Vérifier si l'ID de la réservation existe
         reservation_found = False
         for reservation in reservations["reservation"]:
-            print(reservation["codeResa"])
-            if reservation["codeResa"] == id_resa:
+            if str(reservation["codeResa"]) == str(id_resa):
                 reservations["reservation"].remove(reservation)
                 reservation_found = True
                 break
